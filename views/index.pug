@@ -1,11 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  ul
-    each message in messages
-      li
-        p User: #{message.user}
-        p Message: #{message.text}
-        p Date: #{message.added}
+  h1(class="title")= title
+  p Hi everyone! Welcome to FFA(Free for all) chat room. You are free to send any message. Remember to follow the rule!
+  each message in messages
+    div(class="container")
+      p(class="messages") #{message.text} 
+    p #{message.user} at #{message.added}
+  button(onclick="redirectToSendMessage()" class="button") Send a message
+
+  script.
+    function redirectToSendMessage() {
+        window.location.href = '/new'; 
+    }

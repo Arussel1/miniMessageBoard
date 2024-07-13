@@ -1,10 +1,10 @@
 extends layout
 
 block content
-    form(action='/new', method='POST')
-        h1 Send a message
-        label(for='author') Author:
+    form(action='/new', method='POST' class="form")
+        h1(class="title") Send a Message
+        label(for='author') Name:
             input(type='text', name='author', value='')
-        label(for='content') Content:
+        label(for='content') Message:
             input(type='text', name='content', value='')
-        button(type='submit') Submit
+        button(type='submit' class="button") Submit
