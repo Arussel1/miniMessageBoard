@@ -15,6 +15,7 @@ body {
 }
 .messages{
   font-weight: 700;
+  text-wrap: wrap;
 }
 a {
   color: #00B7FF;
