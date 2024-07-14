@@ -10,19 +10,19 @@ Ensure [Node](https://nodejs.org/en) and [npm](https://www.npmjs.comnode) are in
 ### Steps:
 1. Clone the repo: <br>
 ```bash
-`git clone https://github.com/YourUserName/miniMessageBoard`
+git clone https://github.com/YourUserName/miniMessageBoard
 ```
 2. Navigate to the project folder:<br>
 ```bash
-`cd miniMessageBoard`
+cd miniMessageBoard
 ```
 3. Install the dependencies:<br>
 ```bash
-`npm install`
+npm install
 ```
 4. Start the dev server:<br>
 ```bash
-`npm start`
+npm start
 ```
 
 After these step, you should browser and navigate to `http://localhost:3000` to view the application in action.
