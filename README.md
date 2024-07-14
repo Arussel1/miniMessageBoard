@@ -20,7 +20,17 @@ cd miniMessageBoard
 ```bash
 npm install
 ```
-4. Start the dev server:<br>
+4. Create the .env file:<br>
+```bash
+touch .env
+```
+5. Add your environment inside the file: <br>
+```bash
+MONGODB_USERNAME=
+MONGODB_PASSWORD=
+MONGODB_DB=
+```
+6. Start the dev server:<br>
 ```bash
 npm start
 ```
@@ -30,10 +40,10 @@ After these step, you should browser and navigate to `http://localhost:3000` to 
 
 To prepare the project for production deployment, please use the following command: <br>
 ```bash
-`npm run build`
+npm run build
 ```
 ## Tech stack:
 + [Node](https://nodejs.org/en) as runtime environment. <br>
 + [Pug](https://pugjs.org/api/getting-started.html) as server-side template rendering. <br>
 + [Express](https://expressjs.com/) as backend framework. <br>
-
++ [MongoDB](https://www.mongodb.com/) NoSQL database for storing message. <br>
