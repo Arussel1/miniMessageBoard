@@ -1,16 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
+const pg = require('pg');
 require('dotenv').config();
-const mongoose = require('mongoose');
-
-mongoose.set("strictQuery", false);
-const mongoDB = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@miniMessageBoard.gxazlkl.mongodb.net/${process.env.MONGODB_DB}?retryWrites=true&w=majority&appName=miniMessageBoard`;
-
-main().catch((err) => console.log(err));
-
-async function main() {
-  await mongoose.connect(mongoDB);
-}
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');

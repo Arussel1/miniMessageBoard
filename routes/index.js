@@ -1,32 +1,26 @@
 const express = require('express');
 const router = express.Router();
-const Message = require('../models/message')
-
+const Message = require('../db/queries');
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+router.get('/', async (req, res, next) => {
   try {
-    const messages = await Message.find().sort({ added: -1 }).exec();  // Fetch messages and sort by date
-    res.render('index', { title: 'FFA Chat Room', messages: messages });
-  } catch (err) {
-    next(err);
+    const messages = await Message.getAllMessages();
+    res.render('index', { title: 'Chat Room', messages });
+  } catch (error) {
+    next(error);
   }
 });
 
-router.get('/new', function(req, res, next) {
+
+
+router.get('/new', (req, res, next) => {
   res.render('form', { title: "Mini Messageboard" });
 });
 
 router.post('/new', async (req, res, next) => {
   try {
-    const newMessage = new Message({
-      name: req.body.author,
-      message: req.body.content,
-      added: new Date()
-    });
-    
-    await newMessage.save(); 
-
+    await Message.addMessage(req.body.author,req.body.content); 
     res.redirect('/');
   } catch (err) {
     next(err);

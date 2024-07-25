@@ -2,14 +2,14 @@ extends layout
 
 block content
   h1(class="title")= title
-  p Hi everyone! Welcome to FFA(Free for all) chat room. You are free to send any message. Remember to follow the rule!
+  p Hi everyone! Welcome to FFA (Free for all) chat room. You are free to send any message. Remember to follow the rule!
   each message in messages
     div(class="container")
       p(class="messages")= message.message
-    p #{message.name} at #{message.added.toLocaleString()}
+    p #{message.name} at #{new Date(message.date).toLocaleString()}
   button(onclick="redirectToSendMessage()" class="button") Send a message
-
-  script.
+  
+   script.
     function redirectToSendMessage() {
         window.location.href = '/new'; 
     }

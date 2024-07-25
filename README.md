@@ -26,9 +26,11 @@ touch .env
 ```
 5. Add your environment inside the file: <br>
 ```bash
-MONGODB_USERNAME=
-MONGODB_PASSWORD=
-MONGODB_DB=
+PGHOST=
+PGDATABASE=
+PGUSER=
+PGPASSWORD=
+ENDPOINT_ID=
 ```
 6. Start the dev server:<br>
 ```bash
@@ -46,4 +48,4 @@ npm run build
 + [Node](https://nodejs.org/en) as runtime environment. <br>
 + [Pug](https://pugjs.org/api/getting-started.html) as server-side template rendering. <br>
 + [Express](https://expressjs.com/) as backend framework. <br>
-+ [MongoDB](https://www.mongodb.com/) NoSQL database for storing message. <br>
++ [PostgreSQL](https://www.postgresql.org/) SQL database for storing message. <br>
